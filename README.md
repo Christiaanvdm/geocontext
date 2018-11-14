@@ -1,6 +1,6 @@
 # GeoContext
 
-A django project to retrieve information of a point.
+A django project to retrieve information about a point.
 
 View a running instance at [http://geocontext.kartoza.com](http://geocontext.kartoza.com)
 
