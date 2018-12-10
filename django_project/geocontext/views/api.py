@@ -127,3 +127,7 @@ def get_context(request):
         form = GeoContextForm(initial={'srid': 4326})
 
     return render(request, 'geocontext/get_context.html', {'form': form})
+
+
+def get_started(request):
+        return render(request, 'geocontext/getting_started_base.html')

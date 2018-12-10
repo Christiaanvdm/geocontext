@@ -11,7 +11,9 @@ from geocontext.views.api import (
     ContextValueGeometryListAPI,
     ContextGroupValueAPIView,
     ContextCollectionValueAPIView,
-    get_context
+    get_started,
+    get_context,
+
 )
 
 from geocontext.views.context_service_registry import (
@@ -28,6 +30,9 @@ urlpatterns = [
     url(regex=r'^geocontext/$',
         view=get_context,
         name='geocontext-retrieve'),
+    url(regex=r'^geocontext/getting-started/$',
+        view=get_started,
+        name='getting-started'),
     # Context Service Registry
     url(regex=r'^geocontext/csr/list/$',
         view=ContextServiceRegistryListView.as_view(),
@@ -49,6 +54,7 @@ urlpatterns = [
     url(regex=r'^geocontext/context-collection/(?P<slug>[\w-]+)/$',
         view=ContextCollectionDetailView.as_view(),
         name='context-collection-detail'),
+
 ]
 
 urlpatterns_api = [
